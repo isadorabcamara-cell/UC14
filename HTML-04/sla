@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário</title>
+</head>
+<body>
+
+    <h2>Formulário de Cadastro</h2>
+
+    <form>
+
+        <!-- Parte 1: Informações básicas -->
+        <h3>Informações Básicas</h3>
+
+        Nome completo:<br>
+        <input type="text" name="nome"><br><br>
+
+        E-mail:<br>
+        <input type="email" name="email"><br><br>
+
+        Senha:<br>
+        <input type="password" name="senha"><br><br>
+
+        <!-- Parte 2: Dados pessoais -->
+        <h3>Dados Pessoais</h3>
+
+        Data de nascimento:<br>
+        <input type="date" name="data_nascimento"><br><br>
+
+        Idade:<br>
+        <input type="number" name="idade" min="0" max="120"><br><br>
+
+        Cor favorita:<br>
+        <input type="color" name="cor"><br><br>
+
+        <!-- Parte 3: Preferências -->
+        <h3>Preferências</h3>
+
+        Gênero:<br>
+        <input type="radio" name="genero" value="masculino"> Masculino<br>
+        <input type="radio" name="genero" value="feminino"> Feminino<br>
+        <input type="radio" name="genero" value="outro"> Outro<br><br>
+
+        Interesses:<br>
+        <input type="checkbox" name="interesses" value="esporte"> Esporte<br>
+        <input type="checkbox" name="interesses" value="musica"> Música<br>
+        <input type="checkbox" name="interesses" value="tecnologia"> Tecnologia<br>
+        <input type="checkbox" name="interesses" value="arte"> Arte<br><br>
+
+        <!-- Parte 4: Outros inputs -->
+        <h3>Outros</h3>
+
+        Upload de arquivo:<br>
+        <input type="file" name="arquivo"><br><br>
+
+        <!-- Botão -->
+        <input type="submit" value="Enviar">
+
+    </form>
+
+</body>
+</html>
