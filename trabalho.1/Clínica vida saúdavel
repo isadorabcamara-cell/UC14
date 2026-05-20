@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Clínica Vida Saudável</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #f0f0f0;
+            margin: 20px;
+        }
+
+        #titulo-clinica{
+            color: darkgreen;
+        }
+
+        .bemvindo{
+            font-size: 18px;
+        }
+
+        #servicos, #medicos, #aviso{
+            background-color: white;
+            padding: 10px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .servico, .medico{
+            border: 1px solid gray;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .depoimento{
+            background-color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="titulo-clinica">Clínica Vida Saudável</h1>
+
+    <p class="bemvindo">
+        Bem-vindo à Clínica Vida Saudável. Aqui cuidamos da sua saúde.
+    </p>
+
+    <p>
+        Nossa clínica oferece atendimento médico, exames e vacinação.
+    </p>
+
+    <div id="servicos">
+        <h2>Serviços</h2>
+
+        <div class="servico">
+            <h3>Consultas</h3>
+            <p>Consultas com médicos especializados.</p>
+        </div>
+
+        <div class="servico">
+            <h3>Exames</h3>
+            <p>Exames rápidos e seguros.</p>
+        </div>
+
+        <div class="servico">
+            <h3>Vacinação</h3>
+            <p>Vacinas para crianças e adultos.</p>
+        </div>
+    </div>
+
+    <div id="medicos">
+        <h2>Médicos</h2>
+
+        <div class="medico">
+            <h3>Dra. Ana</h3>
+            <p>Pediatra</p>
+        </div>
+
+        <div class="medico">
+            <h3>Dr. Lucas</h3>
+            <p>Cardiologista</p>
+        </div>
+    </div>
+
+    <div id="aviso">
+        <h2>Aviso</h2>
+        <p>
+            Funcionamos de segunda a sábado das 8h às 18h.
+        </p>
+    </div>
+
+    <h2>Depoimentos</h2>
+
+    <p class="depoimento">
+        Gostei muito do atendimento da clínica.
+    </p>
+
+    <p class="depoimento">
+        Médicos atenciosos e lugar organizado.
+    </p>
+
+</body>
+</html>
