@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agência de Viagens</title>
+
+  <style>
+
+    :root{
+      --azul: #4ea8de;
+      --escuro: #1b263b;
+      --branco: #ffffff;
+    }
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    body{
+      background-color: #0d1b2a;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card{
+      background-color: var(--escuro);
+      width: 650px;
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .texto{
+      color: var(--branco);
+    }
+
+    h1{
+      margin-bottom: 10px;
+    }
+
+    p{
+      margin-bottom: 20px;
+    }
+
+    .botoes{
+      display: flex;
+      gap: 10px;
+    }
+
+    .btn{
+      background-color: var(--azul);
+      border: none;
+      color: white;
+      padding: 10px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn:hover{
+      opacity: 0.8;
+    }
+
+    img{
+      width: 230px;
+      border-radius: 10px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="card">
+
+    <div class="texto">
+      <h1>Travel Time</h1>
+
+      <p>
+        Viaje para lugares lindos e aproveite suas férias
+        com os melhores pacotes de viagem.
+      </p>
+
+      <div class="botoes">
+        <button class="btn">Pacotes</button>
+        <button class="btn">Contato</button>
+      </div>
+    </div>
+
+    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop" alt="praia">
+
+  </div>
+
+</body>
+</html>
