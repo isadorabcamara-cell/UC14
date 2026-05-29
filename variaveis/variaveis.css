@@ -1,0 +1,51 @@
+:root {
+     --cor-primaria: #3498db;
+      --cor-secundaria: #2ecc71;
+       --cor-fundo: #ecf0f1; 
+       --cor-texto: #2c3e50;
+        --cor-branco: #ffffff;
+        
+        --fonte-principal: 'Arial', sans-serif;
+        
+        --borda-radius: 10px; 
+        --sombra-caixa: 0 4px 10px rgba(121, 72, 72, 0.1); 
+    } 
+        
+        body { 
+            margin: 0; 
+            padding: 0; 
+            background-color: var(--cor-fundo); 
+            color: var(--cor-texto); 
+            font-family: var(--fonte-principal); 
+           
+            display: flex;
+             justify-content: center;
+              align-items: center; 
+              height: 100vh; 
+            }
+            
+            .caixa {
+                 background-color: var(--cor-branco); 
+                 padding: 30px; 
+                 border-radius: var(--borda-radius);
+                 box-shadow: var(--sombra-caixa);
+                 text-align: center;
+                  width: 300px; 
+                }
+                
+                h1 { color: var(--cor-primaria);
+                     margin-bottom: 10px;
+               }
+                button {
+                     background-color: var(--cor-primaria);
+                      color: white;
+                       border: none;
+                        padding: 10px 20px;
+                     border-radius: var(--borda-radius);
+                       cursor:pointer;
+                        font-size: 16px;
+                }
+
+                        button:hover {
+                            background-color: var(var(--cor-primaria));
+                        }
