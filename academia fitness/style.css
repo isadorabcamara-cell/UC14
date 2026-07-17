@@ -1,0 +1,348 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background: #f8f8f8;
+    color: #333;
+}
+
+/* MENU */
+
+header{
+    background: #111;
+    padding: 20px 8%;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    color: white;
+    font-size: 30px;
+}
+
+.logo span{
+    color: hotpink;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a{
+    color: white;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.menu a:hover{
+    color: hotpink;
+}
+
+.btn-menu{
+    background: hotpink;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.btn-menu:hover{
+    background: deeppink;
+}
+
+/* HERO */
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 8%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-texto{
+    flex: 1;
+}
+
+.hero-texto h1{
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+
+.hero-texto span{
+    color: hotpink;
+}
+
+.hero-texto p{
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.hero-img{
+    flex: 1;
+}
+
+.hero-img img{
+    width: 100%;
+    border-radius: 15px;
+}
+
+.btn,
+.btn2{
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+.btn{
+    background: hotpink;
+    color: white;
+}
+
+.btn2{
+    border: 2px solid hotpink;
+    color: hotpink;
+}
+
+/* SEÇÕES */
+
+section{
+    padding: 70px 8%;
+}
+
+section h2{
+    text-align: center;
+    margin-bottom: 35px;
+    font-size: 32px;
+    color: #111;
+}
+
+/* SOBRE */
+
+.sobre{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.sobre img{
+    width: 100%;
+    max-width: 450px;
+    border-radius: 15px;
+}
+
+.sobre-texto{
+    flex: 1;
+}
+
+.sobre-texto p{
+    margin-top: 15px;
+    line-height: 1.7;
+}
+
+/* BENEFÍCIOS */
+
+.cards{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card{
+    background: white;
+    width: 250px;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.card i{
+    font-size: 35px;
+    color: hotpink;
+    margin-bottom: 15px;
+}
+
+/* PLANOS */
+
+.planos-container{
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.plano{
+    background: white;
+    width: 280px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.destaque{
+    border: 3px solid hotpink;
+}
+
+.plano h1{
+    color: hotpink;
+    margin: 15px 0;
+}
+
+.plano ul{
+    list-style: none;
+    margin: 20px 0;
+}
+
+.plano li{
+    margin: 10px 0;
+}
+
+.plano button{
+    background: hotpink;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* TREINADORES */
+
+.treinadores-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.trainer{
+    background: white;
+    width: 250px;
+    text-align: center;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.trainer img{
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* GALERIA */
+
+.galeria-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 20px;
+}
+
+.galeria img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* CONTATO */
+
+form{
+    max-width: 600px;
+    margin: auto;
+}
+
+form input,
+form textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+form textarea{
+    height: 130px;
+    resize: none;
+}
+
+form button{
+    width: 100%;
+    padding: 15px;
+    background: hotpink;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* RODAPÉ */
+
+footer{
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer span{
+    color: hotpink;
+}
+
+.redes{
+    margin: 20px 0;
+}
+
+.redes a{
+    color: white;
+    font-size: 28px;
+    margin: 0 10px;
+    transition: .3s;
+}
+
+.redes a:hover{
+    color: hotpink;
+}
+
+/* RESPONSIVO */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .menu{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre{
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
