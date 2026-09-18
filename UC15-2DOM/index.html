@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Painel de Viagem</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1 id="titulo">Meu Painel de Viagem</h1>
+
+        <p>Escolha uma cidade para sua próxima viagem!</p>
+
+        <input id="cidade" type="text" placeholder="Digite uma cidade">
+
+        <button onclick="mostrarCidade()">Mostrar cidade</button>
+
+        <p id="mensagem"></p>
+
+        <button onclick="destacarMensagem()">
+            Destacar mensagem
+        </button>
+
+        <hr>
+
+        <h2>Contador de viagens</h2>
+
+        <div class="contador">
+            <button onclick="diminuir()">-</button>
+
+            <span id="contador">10</span>
+
+            <button onclick="aumentar()">+</button>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
