@@ -1,0 +1,10 @@
+PORTFÓLIO DE ISADORA — COMO USAR
+
+1. Abra esta pasta no VS Code (Arquivo > Abrir Pasta).
+2. Abra o arquivo index.html.
+3. Para visualizar, clique com o botão direito no index.html e escolha "Open with Live Server", se tiver a extensão Live Server instalada.
+4. Se não tiver Live Server, você pode abrir o index.html diretamente no navegador.
+5. Para colocar sua foto, adicione uma imagem à pasta img e renomeie para minha-foto.jpg.
+6. Confira se os projetos e as descrições representam trabalhos que você realmente fez. Ajuste o texto se necessário.
+7. O formulário é apenas demonstrativo: ele valida os campos, mas não envia mensagens para um e-mail.
+8. O JavaScript inclui um comentário informando que houve apoio do ChatGPT, conforme a proposta do trabalho.

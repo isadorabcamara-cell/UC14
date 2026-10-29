@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio profissional de Isadora, estudante de desenvolvimento web.">
+    <title>Portfólio | Isadora</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <a class="pular-conteudo" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="cabecalho">
+        <div class="container navegacao">
+            <a class="logo" href="#inicio" aria-label="Isadora - página inicial">isa<span>.</span></a>
+
+            <button class="botao-menu" id="botao-menu" type="button"
+                aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="menu">
+                <span></span><span></span><span></span>
+            </button>
+
+            <nav class="menu" id="menu" aria-label="Menu principal">
+                <a href="#inicio">Início</a>
+                <a href="#sobre">Sobre mim</a>
+                <a href="#habilidades">Habilidades</a>
+                <a href="#projetos">Projetos</a>
+                <a href="#contato">Contato</a>
+                <button class="botao-tema" id="botao-tema" type="button" aria-label="Ativar tema escuro">☾</button>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo">
+        <section class="inicio secao" id="inicio">
+            <div class="container inicio-conteudo">
+                <div class="inicio-texto">
+                    <p class="etiqueta" id="saudacao">Olá, seja bem-vindo(a)!</p>
+                    <h1>Oi, eu sou a <span>Isadora</span></h1>
+                    <h2>Estudante de desenvolvimento web</h2>
+                    <p>Estou aprendendo a criar sites com HTML, CSS e JavaScript. Este é meu portfólio, onde compartilho um pouco sobre mim e os projetos que desenvolvi durante meus estudos.</p>
+                    <div class="botoes-inicio">
+                        <a class="botao principal" href="#projetos">Ver meus projetos</a>
+                        <a class="botao secundario" href="#contato">Entrar em contato</a>
+                    </div>
+                </div>
+
+                <div class="inicio-foto">
+                    <div class="foto-moldura">
+                        <img src="img/minha-foto.jpg" alt="Foto de Isadora" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="avatar-reserva" aria-label="Espaço reservado para foto">I<span>.</span></div>
+                    </div>
+                    <div class="decoracao decoracao-um" aria-hidden="true">✦</div>
+                    <div class="decoracao decoracao-dois" aria-hidden="true">♡</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao sobre" id="sobre">
+            <div class="container">
+                <div class="titulo-secao">
+                    <p class="etiqueta">Um pouco sobre mim</p>
+                    <h2>Quem sou <span>eu?</span></h2>
+                </div>
+                <div class="sobre-cartao">
+                    <p>Meu nome é Isadora e sou estudante. Estou aprendendo programação e desenvolvimento de páginas web. Gosto de conhecer novas ideias, praticar o que aprendo nas aulas e transformar minhas ideias em projetos.</p>
+                    <p>Quero continuar desenvolvendo minhas habilidades e ganhar mais experiência na área de tecnologia.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao habilidades" id="habilidades">
+            <div class="container">
+                <div class="titulo-secao">
+                    <p class="etiqueta">O que estou aprendendo</p>
+                    <h2>Minhas <span>habilidades</span></h2>
+                </div>
+                <div class="habilidades-grade">
+                    <article class="habilidade-cartao">
+                        <div class="habilidade-topo"><span class="habilidade-icone">5</span><h3>HTML</h3></div>
+                        <p>Estrutura e organização do conteúdo de páginas.</p>
+                        <div class="barra" role="progressbar" aria-label="Nível de HTML: iniciante" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60"><span style="width: 60%"></span></div>
+                        <small>Em desenvolvimento</small>
+                    </article>
+                    <article class="habilidade-cartao">
+                        <div class="habilidade-topo"><span class="habilidade-icone">✿</span><h3>CSS</h3></div>
+                        <p>Estilização, cores, organização e responsividade.</p>
+                        <div class="barra" role="progressbar" aria-label="Nível de CSS: iniciante" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50"><span style="width: 50%"></span></div>
+                        <small>Em desenvolvimento</small>
+                    </article>
+                    <article class="habilidade-cartao">
+                        <div class="habilidade-topo"><span class="habilidade-icone">JS</span><h3>JavaScript</h3></div>
+                        <p>Interatividade, funções e manipulação do DOM.</p>
+                        <div class="barra" role="progressbar" aria-label="Nível de JavaScript: iniciante" aria-valuemin="0" aria-valuemax="100" aria-valuenow="35"><span style="width: 35%"></span></div>
+                        <small>Aprendendo</small>
+                    </article>
+                </div>
+                <p class="nota-habilidades">Os níveis são apenas uma estimativa e podem ser ajustados conforme minha experiência.</p>
+            </div>
+        </section>
+
+        <section class="secao projetos" id="projetos">
+            <div class="container">
+                <div class="titulo-secao">
+                    <p class="etiqueta">Praticando na programação</p>
+                    <h2>Meus <span>projetos</span></h2>
+                    <p class="subtitulo-secao">Alguns trabalhos que desenvolvi ou pratiquei durante as aulas.</p>
+                </div>
+                <div class="projetos-grade">
+                    <article class="projeto-cartao">
+                        <div class="projeto-imagem projeto-um" aria-hidden="true"><span>Isally Fit</span></div>
+                        <div class="projeto-info">
+                            <h3>Isally Fit</h3>
+                            <p>Uma página de academia com apresentação, benefícios e planos.</p>
+                            <div class="tecnologias"><span>HTML</span><span>CSS</span></div>
+                            <p class="projeto-status">Projeto de aula</p>
+                        </div>
+                    </article>
+                    <article class="projeto-cartao">
+                        <div class="projeto-imagem projeto-dois" aria-hidden="true"><span>Vida Saudável</span></div>
+                        <div class="projeto-info">
+                            <h3>Clínica Vida Saudável</h3>
+                            <p>Uma página de exemplo para apresentar uma clínica e seus serviços.</p>
+                            <div class="tecnologias"><span>HTML</span><span>CSS</span></div>
+                            <p class="projeto-status">Projeto de aula</p>
+                        </div>
+                    </article>
+                    <article class="projeto-cartao">
+                        <div class="projeto-imagem projeto-tres" aria-hidden="true"><span>JavaScript</span></div>
+                        <div class="projeto-info">
+                            <h3>Página interativa</h3>
+                            <p>Exercícios de JavaScript com botões, mensagens e alterações na página.</p>
+                            <div class="tecnologias"><span>HTML</span><span>JavaScript</span></div>
+                            <p class="projeto-status">Projeto de aula</p>
+                        </div>
+                    </article>
+                </div>
+                <p class="aviso-projetos">Confira se as descrições correspondem aos seus trabalhos e troque os exemplos se necessário.</p>
+            </div>
+        </section>
+
+        <section class="secao contato" id="contato">
+            <div class="container">
+                <div class="titulo-secao">
+                    <p class="etiqueta">Vamos conversar</p>
+                    <h2>Entre em <span>contato</span></h2>
+                    <p class="subtitulo-secao">Preencha os campos abaixo para testar o formulário.</p>
+                </div>
+                <form class="formulario" id="formulario-contato" novalidate>
+                    <div class="campo">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" aria-describedby="erro-nome">
+                        <small class="erro" id="erro-nome"></small>
+                    </div>
+                    <div class="campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" aria-describedby="erro-email">
+                        <small class="erro" id="erro-email"></small>
+                    </div>
+                    <div class="campo">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem (mínimo de 20 caracteres)" aria-describedby="erro-mensagem"></textarea>
+                        <small class="erro" id="erro-mensagem"></small>
+                    </div>
+                    <div class="campo campo-consentimento">
+                        <label class="consentimento" for="consentimento">
+                            <input type="checkbox" id="consentimento" name="consentimento">
+                            <span>Concordo em enviar as informações preenchidas neste formulário.</span>
+                        </label>
+                        <small class="erro" id="erro-consentimento"></small>
+                    </div>
+                    <button class="botao principal botao-enviar" type="submit">Enviar mensagem</button>
+                    <p class="mensagem-sucesso" id="mensagem-sucesso" role="status" aria-live="polite"></p>
+                    <p class="nota-formulario">Este formulário é demonstrativo: ele valida os campos, mas não envia dados para um e-mail ou servidor.</p>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container rodape-conteudo">
+            <p>Feito por <strong>Isadora</strong> ♡</p>
+            <p>© <span id="ano-atual"></span> - Todos os direitos reservados.</p>
+            <a href="#inicio">Voltar ao topo ↑</a>
+        </div>
+    </footer>
+</body>
+</html>
