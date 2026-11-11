@@ -1,0 +1,499 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="EcoGeekie: aprenda e pratique atitudes sustentáveis no Senac.">
+  <title>EcoGeekie | Aprender, cuidar e transformar</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topbar">
+    <a class="logo" href="#inicio">
+  <img
+    class="logo-img"
+    src="img/ChatGPT Image 11 de nov. de 2026, 17_43_55.png"
+    alt="Logo EcoGeekie"
+  >
+  Eco<span>Geekie</span>
+</a>
+
+    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">
+      ☰ <span class="sr-only">Abrir menu</span>
+    </button>
+
+    <nav id="nav" aria-label="Menu principal">
+      <a href="#inicio">Início</a>
+      <a href="#trilha">Capítulos</a>
+      <a href="#quiz">Quiz</a>
+      <a href="#conquistas">Conquistas</a>
+    </nav>
+
+    <button class="profile-btn" id="openProfile" type="button">
+      <span id="avatar">A</span>
+      <b id="headerName">Meu perfil</b>
+    </button>
+  </header>
+
+  <main id="conteudo">
+
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <span class="eyebrow light">EDUCAÇÃO • NATUREZA • AÇÃO</span>
+
+        <h1>O futuro começa com as escolhas de <em>hoje.</em></h1>
+
+        <p>
+          Uma jornada de aprendizagem e transformação.
+          Complete missões, descubra novos hábitos e ajude
+          a construir um Senac mais sustentável.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn sand" href="#trilha">Explorar capítulos ↗</a>
+          <button class="btn outline" id="heroProfile">Personalizar perfil</button>
+        </div>
+
+        <small class="hero-note">● Sua jornada sustentável começa com uma atitude.</small>
+      </div>
+
+      <div class="hero-art" role="img" aria-label="Composição decorativa inspirada na natureza">
+        <div class="ring"></div>
+        <div class="leaf l1">❧</div>
+        <div class="leaf l2">❧</div>
+
+        <div class="stamp">
+          <small>PEQUENAS AÇÕES</small>
+          <strong>GRANDES<br>TRANSFORMAÇÕES</strong>
+          <small>ECOGEEKIE · SENAC</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="wrap welcome">
+      <div>
+        <span class="eyebrow">BEM-VINDO(A) À JORNADA</span>
+        <h2 id="welcomeTitle">Olá! Vamos cuidar do nosso espaço?</h2>
+        <p>Seu progresso fica salvo neste navegador.</p>
+      </div>
+
+      <button class="link-btn" id="editProfile">Editar perfil →</button>
+    </section>
+
+    <section class="wrap stats" aria-label="Resumo do progresso">
+
+      <article class="stat">
+        <span>✳</span>
+        <div>
+          <small>PONTOS</small>
+          <strong id="points">0</strong>
+          <p>pontos conquistados</p>
+        </div>
+      </article>
+
+      <article class="stat">
+        <span>▤</span>
+        <div>
+          <small>MISSÕES</small>
+          <strong id="missions">0/9</strong>
+          <p>atividades concluídas</p>
+        </div>
+      </article>
+
+      <article class="stat">
+        <span>◉</span>
+        <div>
+          <small>CAPÍTULOS</small>
+          <strong id="chapters">0/3</strong>
+          <p>capítulos finalizados</p>
+        </div>
+      </article>
+
+      <article class="stat">
+        <span>↗</span>
+        <div class="progress-box">
+          <small>PROGRESSO GERAL</small>
+          <strong id="percent">0%</strong>
+          <div class="track" role="progressbar"
+            aria-label="Progresso geral"
+            aria-valuemin="0"
+            aria-valuemax="100"
+            aria-valuenow="0"
+            id="progress">
+            <i id="progressFill"></i>
+          </div>
+        </div>
+      </article>
+
+    </section>
+
+    <section class="wrap section" id="trilha">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SUA APRENDIZAGEM</span>
+          <h2>Uma trilha, três transformações.</h2>
+          <p>
+            Cada trimestre traz um tema e atividades
+            para colocar o conhecimento em prática.
+          </p>
+        </div>
+
+        <span class="chapter-count">
+          01 — 03<br>
+          <small>JORNADA ECO</small>
+        </span>
+      </div>
+
+      <div class="chapter-grid">
+
+        <article class="chapter-card">
+          <div class="cover cover1">
+            <small>01 / PRIMEIRO TRIMESTRE</small>
+            <b>♻</b>
+          </div>
+
+          <div class="card-content">
+            <label>RESÍDUOS E RECICLAGEM</label>
+            <h3>Escola limpa, consciência viva</h3>
+            <p>
+              Entenda o descarte correto e ajude a manter
+              os espaços da escola limpos.
+            </p>
+            <button class="btn dark open-chapter" data-chapter="0">
+              Entrar no capítulo
+            </button>
+          </div>
+        </article>
+
+        <article class="chapter-card">
+          <div class="cover cover2">
+            <small>02 / SEGUNDO TRIMESTRE</small>
+            <b>❧</b>
+          </div>
+
+          <div class="card-content">
+            <label>BIODIVERSIDADE E CUIDADO</label>
+            <h3>Senac mais verde</h3>
+            <p>
+              Conheça a importância das plantas e participe
+              do cuidado das áreas verdes.
+            </p>
+            <button class="btn dark open-chapter" data-chapter="1">
+              Entrar no capítulo
+            </button>
+          </div>
+        </article>
+
+        <article class="chapter-card">
+          <div class="cover cover3">
+            <small>03 / TERCEIRO TRIMESTRE</small>
+            <b>✺</b>
+          </div>
+
+          <div class="card-content">
+            <label>REAPROVEITAMENTO</label>
+            <h3>Lixo que vira vida</h3>
+            <p>
+              Descubra como resíduos orgânicos podem
+              se transformar em adubo.
+            </p>
+            <button class="btn dark open-chapter" data-chapter="2">
+              Entrar no capítulo
+            </button>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="wrap detail" id="chapterDetail" hidden aria-live="polite">
+
+      <div class="detail-heading">
+        <div>
+          <span class="eyebrow" id="detailEyebrow">CAPÍTULO 01</span>
+          <h2 id="detailTitle"></h2>
+        </div>
+
+        <button class="close" id="closeDetail" aria-label="Fechar capítulo">×</button>
+      </div>
+
+      <p id="detailIntro" class="detail-intro"></p>
+
+      <div class="detail-grid">
+
+        <article class="learning">
+          <span class="eyebrow">APRENDA</span>
+          <h3>Por que esse tema importa?</h3>
+          <p id="detailLearning"></p>
+
+          <div class="fact">
+            <b>DESAFIO DE REFLEXÃO</b>
+            <p id="detailFact"></p>
+          </div>
+        </article>
+
+        <article class="learning">
+          <span class="eyebrow">MÃO NA MASSA</span>
+          <h3>Missões do capítulo</h3>
+          <p>
+            Marque a missão depois de realizar a atividade
+            com seu grupo. Peça autorização da escola
+            quando necessário.
+          </p>
+
+          <div id="missionList" class="mission-list"></div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="quiz-section" id="quiz">
+      <div class="wrap quiz-layout">
+
+        <div class="quiz-copy">
+          <span class="eyebrow light">APRENDA E TESTE</span>
+          <h2>Conhecimento também transforma.</h2>
+          <p>
+            Responda ao quiz e veja o quanto você já sabe
+            sobre atitudes sustentáveis.
+          </p>
+          <div class="question-mark">?</div>
+        </div>
+
+        <form class="quiz-box" id="quizForm">
+
+          <div class="quiz-head">
+            <b>QUIZ ECOGEEKIE</b>
+            <span>03 PERGUNTAS</span>
+          </div>
+
+          <fieldset>
+            <legend>1. Qual atitude ajuda na coleta seletiva?</legend>
+
+            <label>
+              <input type="radio" name="q1" value="a">
+              Misturar todos os resíduos.
+            </label>
+
+            <label>
+              <input type="radio" name="q1" value="b">
+              Separar os materiais conforme o tipo.
+            </label>
+
+            <label>
+              <input type="radio" name="q1" value="c">
+              Deixar o lixo em qualquer lugar.
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>2. Como cuidar das plantas da escola?</legend>
+
+            <label>
+              <input type="radio" name="q2" value="a">
+              Arrancar folhas por diversão.
+            </label>
+
+            <label>
+              <input type="radio" name="q2" value="b">
+              Jogar qualquer produto na terra.
+            </label>
+
+            <label>
+              <input type="radio" name="q2" value="c">
+              Regar conforme a necessidade da planta.
+            </label>
+          </fieldset>
+
+          <fieldset>
+            <legend>3. O que acontece na compostagem?</legend>
+
+            <label>
+              <input type="radio" name="q3" value="a">
+              Resíduos orgânicos se transformam em composto.
+            </label>
+
+            <label>
+              <input type="radio" name="q3" value="b">
+              Plástico vira água.
+            </label>
+
+            <label>
+              <input type="radio" name="q3" value="c">
+              Todo tipo de lixo é queimado.
+            </label>
+          </fieldset>
+
+          <button class="btn sand full" type="submit" id="quizSubmit">
+            Enviar respostas
+          </button>
+
+          <p id="quizResult" class="result" aria-live="polite"></p>
+
+          <button class="link-btn" id="retryQuiz" type="button" hidden>
+            Refazer quiz
+          </button>
+
+        </form>
+      </div>
+    </section>
+
+    <section class="wrap section" id="conquistas">
+
+      <div class="section-heading">
+        <div>
+          <span class="eyebrow">SUAS CONQUISTAS</span>
+          <h2>Atitudes que merecem reconhecimento.</h2>
+          <p>
+            As medalhas aparecem conforme você conclui
+            as missões de cada capítulo.
+          </p>
+        </div>
+      </div>
+
+      <div class="badges">
+
+        <article class="badge" id="badge0">
+          <span>♻</span>
+          <div>
+            <small>MEDALHA 01</small>
+            <h3>Guardião da limpeza</h3>
+            <p>Conclua as três missões do primeiro capítulo.</p>
+            <b>Ainda não conquistada</b>
+          </div>
+        </article>
+
+        <article class="badge" id="badge1">
+          <span>❧</span>
+          <div>
+            <small>MEDALHA 02</small>
+            <h3>Protetor da natureza</h3>
+            <p>Conclua as três missões do segundo capítulo.</p>
+            <b>Ainda não conquistada</b>
+          </div>
+        </article>
+
+        <article class="badge" id="badge2">
+          <span>✺</span>
+          <div>
+            <small>MEDALHA 03</small>
+            <h3>Mestre sustentável</h3>
+            <p>Conclua as três missões do terceiro capítulo.</p>
+            <b>Ainda não conquistada</b>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="ods">
+      <div class="wrap ods-layout">
+
+        <div>
+          <span class="eyebrow light">CONECTADO À ONU</span>
+          <h2>Pequenas ações ligadas a grandes objetivos.</h2>
+          <p>
+            O EcoGeekie se relaciona com os Objetivos
+            de Desenvolvimento Sustentável da ONU.
+          </p>
+        </div>
+
+        <div class="ods-list">
+
+          <article>
+            <strong>12</strong>
+            <div>
+              <b>Consumo e produção responsáveis</b>
+              <small>Reduzir resíduos e incentivar o reaproveitamento.</small>
+            </div>
+          </article>
+
+          <article>
+            <strong>13</strong>
+            <div>
+              <b>Ação contra a mudança global do clima</b>
+              <small>Promover atitudes que diminuam impactos ambientais.</small>
+            </div>
+          </article>
+
+          <article>
+            <strong>15</strong>
+            <div>
+              <b>Vida terrestre</b>
+              <small>Valorizar a biodiversidade e cuidar das áreas verdes.</small>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+  <a class="logo" href="#inicio">
+  <img
+    class="logo-img"
+    src="img/ChatGPT Image 11 de nov. de 2026, 17_43_55.png"
+    alt="Logo EcoGeekie"
+  >
+  Eco<span>Geekie</span>
+</a>
+
+    <p>Aprender. Cuidar. Transformar.</p>
+    <small>Projeto educativo de sustentabilidade • Senac</small>
+
+    <button class="link-btn reset-link" id="resetProgress">
+      Reiniciar meu progresso
+    </button>
+  </footer>
+
+  <dialog id="profileDialog" class="dialog">
+    <form id="profileForm">
+
+      <button class="close dialog-x" type="button" id="closeProfile" aria-label="Fechar">
+        ×
+      </button>
+
+      <span class="eyebrow">SEU ESPAÇO ECO</span>
+      <h2>Vamos personalizar seu perfil?</h2>
+      <p>Digite seu nome para deixar a jornada com a sua cara.</p>
+
+      <label for="studentName">Nome do estudante</label>
+      <input id="studentName" maxlength="35"
+        placeholder="Como podemos te chamar?" autocomplete="name">
+
+      <div class="dialog-actions">
+        <button class="btn dark" type="submit">Salvar perfil</button>
+      </div>
+
+      <p id="profileMessage" class="result" aria-live="polite"></p>
+    </form>
+  </dialog>
+
+  <dialog id="resetDialog" class="dialog">
+    <form method="dialog">
+      <span class="eyebrow">ATENÇÃO</span>
+      <h2>Reiniciar progresso?</h2>
+      <p>
+        Isso apagará os pontos, missões e resultado do quiz
+        salvos neste navegador.
+      </p>
+
+      <div class="dialog-actions">
+        <button class="btn pale" value="cancel">Cancelar</button>
+        <button class="btn dark" id="confirmReset" value="default">
+          Sim, reiniciar
+        </button>
+      </div>
+    </form>
+  </dialog>
+
+</body>
+</html>
