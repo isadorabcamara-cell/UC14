@@ -1,1356 +1,568 @@
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap');
-
-:root {
-  --evergreen: #24301E;
-  --olive: #3F4C26;
-  --dusty: #728141;
-  --palm: #99A474;
-  --sand: #978A56;
-  --cream: #F3F1E8;
-  --paper: #FBFAF5;
-  --ink: #263021;
-  --muted: #68705E;
-  --line: #E1E2D6;
-}
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-
-body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'DM Sans', Arial, sans-serif;
-  line-height: 1.6;
-}
-
-button, input {
-  font: inherit;
-}
-
-button, a {
-  -webkit-tap-highlight-color: transparent;
-}
-
-a {
-  color: inherit;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible {
-  outline: 3px solid #B18D43;
-  outline-offset: 4px;
-}
-
-.skip {
-  position: absolute;
-  top: -60px;
-  left: 12px;
-  background: white;
-  padding: 10px;
-  z-index: 300;
-}
-
-.skip:focus {
-  top: 12px;
-}
-
-/* MENU */
-
-.topbar {
-  height: 76px;
-  padding: 0 7.5%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 22px;
-  background: var(--evergreen);
-  color: white;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 5px 20px #17201430;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 9px;
-  color: white;
-  text-decoration: none;
-  font-size: 23px;
-  font-weight: 700;
-  letter-spacing: -0.8px;
-}
-
-.logo > span:last-child {
-  color: #B9C39A;
-  font-weight: 400;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: white;
-  text-decoration: none;
-  font-size: 23px;
-  font-weight: 700;
-  letter-spacing: -0.8px;
-}
-
-.logo > span:last-child {
-  color: #B9C39A;
-  font-weight: 400;
-}
-
-.logo-img {
-  width: 42px;
-  height: 42px;
-  object-fit: contain;
-  display: block;
-  flex-shrink: 0;
-}
-
-.topbar nav {
-  display: flex;
-  gap: 30px;
-}
-
-.topbar nav a {
-  color: #E0E3D7;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-.topbar nav a:hover {
-  color: #C5D0A3;
-}
-
-.profile-btn {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 12px 6px 6px;
-  border: 1px solid #ffffff35;
-  border-radius: 30px;
-  background: #ffffff10;
-  color: white;
-  font-size: 12px;
-  cursor: pointer;
-}
-
-.profile-btn span {
-  width: 29px;
-  height: 29px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: var(--palm);
-  color: var(--evergreen);
-  font-weight: 700;
-}
-
-.menu-toggle {
-  display: none;
-}
-
-/* INÍCIO */
-
-.hero {
-  min-height: 470px;
-  padding: 65px 8%;
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  align-items: center;
-  overflow: hidden;
-  color: white;
-  background:
-    radial-gradient(ellipse at 80% 20%, #59663a, transparent 36%),
-    linear-gradient(115deg, #24301E, #354126 65%, #3F4C26);
-}
-
-.hero-copy {
-  max-width: 600px;
-  z-index: 1;
-}
-
-.eyebrow {
-  display: inline-block;
-  color: var(--dusty);
-  font-size: 10px;
-  letter-spacing: 2px;
-  font-weight: 700;
-}
-
-.eyebrow.light {
-  color: #C4CE9F;
-}
-
-.hero h1 {
-  max-width: 620px;
-  margin: 18px 0;
-  font: 700 clamp(38px, 5vw, 60px)/1.08 'Playfair Display', Georgia, serif;
-  letter-spacing: -1.4px;
-}
-
-.hero h1 em {
-  color: #C1CC9A;
-}
-
-.hero-copy > p {
-  max-width: 520px;
-  color: #D6DCCB;
-  font-size: 14px;
-  line-height: 1.9;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 26px;
-}
-
-.btn {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
-  border: 0;
-  border-radius: 5px;
-  padding: 13px 20px;
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-  text-decoration: none;
-  transition: 0.2s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.sand {
-  background: #B4B78A;
-  color: #202A1B;
-}
-
-.sand:hover {
-  background: #C8C99E;
-}
-
-.outline {
-  border: 1px solid #ffffff75;
-  color: white;
-  background: transparent;
-}
-
-.dark {
-  background: var(--evergreen);
-  color: white;
-}
-
-.dark:hover {
-  background: var(--olive);
-}
-
-.pale {
-  border: 1px solid var(--olive);
-  color: var(--olive);
-  background: transparent;
-}
-
-.hero-note {
-  display: block;
-  margin-top: 25px;
-  color: #C6CEB9;
-  font-size: 11px;
-}
-
-/* ELEMENTO DECORATIVO */
-
-.hero-art {
-  min-height: 330px;
-  position: relative;
-  display: grid;
-  place-items: center;
-}
-
-.ring {
-  width: 300px;
-  height: 300px;
-  border: 1px solid #D4DAB04D;
-  border-radius: 50%;
-  position: absolute;
-  box-shadow: 0 0 0 38px #ffffff08, 0 0 0 78px #ffffff05;
-}
-
-.leaf {
-  position: absolute;
-  color: #B8C48D;
-  font: 170px Georgia;
-  text-shadow: 0 15px 25px #1118;
-}
-
-.l1 {
-  left: 5%;
-  top: 10px;
-  transform: rotate(-35deg);
-}
-
-.l2 {
-  right: 4%;
-  bottom: 0;
-  transform: rotate(145deg);
-  color: #728141;
-}
-
-.stamp {
-  position: relative;
-  width: 205px;
-  padding: 22px 19px;
-  background: #E7E5D5;
-  color: var(--evergreen);
-  box-shadow: 0 18px 40px #10170e55;
-  transform: rotate(-4deg);
-}
-
-.stamp small {
-  display: block;
-  font-size: 8px;
-  letter-spacing: 2px;
-}
-
-.stamp strong {
-  display: block;
-  margin: 12px 0;
-  font: 700 23px/1.1 'Playfair Display', Georgia, serif;
-}
-
-/* BOAS-VINDAS */
-
-.wrap {
-  width: min(1160px, 84%);
-  margin-inline: auto;
-}
-
-.welcome {
-  padding: 40px 0 28px;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 20px;
-}
-
-.welcome h2 {
-  margin: 6px 0 3px;
-  font: 600 25px 'Playfair Display', Georgia, serif;
-}
-
-.welcome p {
-  font-size: 12px;
-  color: var(--muted);
-}
-
-.link-btn {
-  border: 0;
-  background: transparent;
-  color: var(--olive);
-  font-size: 12px;
-  font-weight: 700;
-  cursor: pointer;
-}
-
-.link-btn:hover {
-  text-decoration: underline;
-}
-
-/* PROGRESSO */
-
-.stats {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
-  padding-bottom: 70px;
-}
-
-.stat {
-  min-height: 112px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px;
-  border: 1px solid var(--line);
-  background: white;
-}
-
-.stat > span {
-  flex: 0 0 38px;
-  height: 38px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #E9EDDF;
-  color: var(--olive);
-  font-size: 21px;
-}
-
-.stat small {
-  display: block;
-  color: var(--muted);
-  font-size: 9px;
-  letter-spacing: 1.3px;
-  font-weight: 700;
-}
-
-.stat strong {
-  display: block;
-  color: var(--evergreen);
-  font: 700 25px 'Playfair Display', Georgia, serif;
-}
-
-.stat p {
-  color: #818777;
-  font-size: 10px;
-}
-
-.progress-box {
-  flex: 1;
-  min-width: 0;
-}
-
-.track {
-  height: 6px;
-  margin-top: 6px;
-  background: #E8EADD;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.track i {
-  display: block;
-  width: 0;
-  height: 100%;
-  background: var(--dusty);
-  transition: width 0.4s;
-}
-
-/* CAPÍTULOS */
-
-.section {
-  padding-bottom: 75px;
-}
-
-.section-heading {
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  gap: 20px;
-  margin-bottom: 28px;
-}
-
-.section-heading h2 {
-  margin: 8px 0;
-  font: 700 clamp(26px, 3vw, 36px) 'Playfair Display', Georgia, serif;
-}
-
-.section-heading p {
-  max-width: 600px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.chapter-count {
-  text-align: right;
-  color: var(--dusty);
-  font: 700 22px 'Playfair Display';
-}
-
-.chapter-count small {
-  font: 700 8px 'DM Sans';
-  letter-spacing: 1.5px;
-}
-
-.chapter-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.chapter-card {
-  overflow: hidden;
-  background: white;
-  border: 1px solid var(--line);
-  transition: 0.25s;
-}
-
-.chapter-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 14px 35px #24301e14;
-}
-
-.cover {
-  height: 165px;
-  padding: 18px 21px;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-
-.cover small {
-  font-size: 9px;
-  letter-spacing: 1.2px;
-  font-weight: 700;
-}
-
-.cover b {
-  align-self: end;
-  color: #24301E;
-  font: 100px/0.8 Georgia;
-  opacity: 0.8;
-}
-
-.cover1 {
-  background: linear-gradient(135deg, #D8DDC2, #99A474);
-}
-
-.cover2 {
-  background: linear-gradient(135deg, #B9C29B, #728141);
-}
-
-.cover3 {
-  background: linear-gradient(135deg, #D8D0A7, #978A56);
-}
-
-.card-content {
-  padding: 23px;
-}
-
-.card-content label {
-  color: var(--dusty);
-  font-size: 9px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-}
-
-.card-content h3 {
-  margin: 9px 0;
-  font: 700 21px 'Playfair Display', Georgia, serif;
-}
-
-.card-content p {
-  min-height: 65px;
-  margin-bottom: 18px;
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.card-content .btn {
-  width: 100%;
-}
-
-/* DETALHES DOS CAPÍTULOS */
-
-.detail {
-  margin-bottom: 70px;
-  padding: 32px;
-  background: #ECEDE2;
-  border: 1px solid #DDE0D0;
-}
-
-.detail[hidden] {
-  display: none;
-}
-
-.detail-heading {
-  display: flex;
-  justify-content: space-between;
-}
-
-.detail-heading h2 {
-  font: 700 30px 'Playfair Display', Georgia, serif;
-}
-
-.close {
-  border: 0;
-  background: transparent;
-  color: var(--olive);
-  font-size: 30px;
-  cursor: pointer;
-}
-
-.detail-intro {
-  margin: 12px 0 22px;
-  color: var(--muted);
-  font-size: 13px;
-}
-
-.detail-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 18px;
-}
-
-.learning {
-  padding: 24px;
-  background: white;
-}
-
-.learning h3 {
-  margin: 8px 0;
-  font: 700 21px 'Playfair Display', Georgia, serif;
-}
-
-.learning > p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.fact {
-  margin-top: 18px;
-  padding: 16px;
-  background: #F0F1E7;
-  border-left: 3px solid var(--sand);
-}
-
-.fact b {
-  font-size: 9px;
-  letter-spacing: 1px;
-  color: var(--olive);
-}
-
-.fact p {
-  margin-top: 5px;
-  color: #59614E;
-  font-size: 12px;
-}
-
-.mission-list {
-  display: grid;
-  gap: 8px;
-  margin-top: 14px;
-}
-
-.mission {
-  display: flex;
-  gap: 10px;
-  padding: 12px;
-  background: #F4F5EF;
-  border: 1px solid #E2E5D9;
-  font-size: 12px;
-}
-
-.mission input {
-  margin-top: 4px;
-  accent-color: var(--olive);
-}
-
-.mission small {
-  display: block;
-  color: var(--muted);
-  font-size: 10px;
-}
-
-.mission.done {
-  background: #E8EDDF;
-}
-
-/* QUIZ */
-
-.quiz-section {
-  padding: 70px 0;
-  background: var(--evergreen);
-  color: white;
-}
-
-.quiz-layout {
-  display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 55px;
-  align-items: start;
-}
-
-.quiz-copy {
-  position: sticky;
-  top: 115px;
-}
-
-.quiz-copy h2 {
-  margin: 13px 0;
-  font: 700 37px/1.15 'Playfair Display', Georgia, serif;
-}
-
-.quiz-copy p {
-  max-width: 340px;
-  color: #D1D8C5;
-  font-size: 13px;
-  line-height: 1.8;
-}
-
-.question-mark {
-  margin-top: 25px;
-  width: 90px;
-  height: 90px;
-  display: grid;
-  place-items: center;
-  border: 1px solid #C0CA9A80;
-  border-radius: 50%;
-  color: #C0CA9A;
-  font: italic 60px 'Playfair Display';
-}
-
-.quiz-box {
-  padding: 28px;
-  background: #F8F7F0;
-  color: var(--ink);
-}
-
-.quiz-head {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 15px;
-  margin-bottom: 15px;
-  border-bottom: 1px solid var(--line);
-  color: var(--olive);
-  font-size: 9px;
-  letter-spacing: 1.2px;
-}
-
-.quiz-box fieldset {
-  border: 0;
-  margin-bottom: 17px;
-}
-
-.quiz-box legend {
-  margin-bottom: 8px;
-  font-size: 13px;
-  font-weight: 700;
-}
-
-.quiz-box label {
-  display: block;
-  margin: 7px 0;
-  padding: 10px 12px;
-  background: white;
-  border: 1px solid #E5E6DB;
-  color: #525B49;
-  font-size: 11px;
-  cursor: pointer;
-}
-
-.quiz-box label:hover {
-  border-color: var(--palm);
-  background: #F2F4EC;
-}
-
-.quiz-box input {
-  margin-right: 8px;
-  accent-color: var(--olive);
-}
-
-.full {
-  width: 100%;
-}
-
-.result {
-  margin-top: 12px;
-  color: var(--olive);
-  font-size: 12px;
-  font-weight: 700;
-}
-
-/* CONQUISTAS */
-
-.badges {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-}
-
-.badge {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 19px;
-  background: white;
-  border: 1px solid var(--line);
-  opacity: 0.65;
-}
-
-.badge.unlocked {
-  opacity: 1;
-  border-color: var(--palm);
-  background: #F0F2E8;
-}
-
-.badge > span {
-  flex: 0 0 55px;
-  height: 55px;
-  display: grid;
-  place-items: center;
-  border-radius: 50%;
-  background: #E7E9DD;
-  color: var(--olive);
-  font: 35px Georgia;
-}
-
-.badge small {
-  color: var(--dusty);
-  font-size: 8px;
-  letter-spacing: 1px;
-  font-weight: 700;
-}
-
-.badge h3 {
-  font: 700 16px 'Playfair Display', Georgia, serif;
-}
-
-.badge p {
-  color: var(--muted);
-  font-size: 10px;
-}
-
-.badge b {
-  display: block;
-  margin-top: 6px;
-  color: #7A806F;
-  font-size: 9px;
-}
-
-.badge.unlocked b {
-  color: var(--olive);
-}
-
-/* ODS */
-
-.ods {
-  padding: 58px 0;
-  background: #E7E9DA;
-}
-
-.ods-layout {
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 50px;
-  align-items: center;
-}
-
-.ods h2 {
-  margin: 10px 0;
-  font: 700 31px/1.2 'Playfair Display', Georgia, serif;
-}
-
-.ods-layout > div:first-child p {
-  color: #626B58;
-  font-size: 12px;
-  line-height: 1.8;
-}
-
-.ods-list {
-  display: grid;
-  gap: 10px;
-}
-
-.ods-list article {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 13px;
-  background: #ffffffb8;
-}
-
-.ods-list article > strong {
-  flex: 0 0 42px;
-  height: 42px;
-  display: grid;
-  place-items: center;
-  background: var(--olive);
-  color: white;
-  font: 700 19px 'Playfair Display';
-}
-
-.ods-list b,
-.ods-list small {
-  display: block;
-}
-
-.ods-list b {
-  font-size: 12px;
-}
-
-.ods-list small {
-  margin-top: 3px;
-  color: var(--muted);
-  font-size: 10px;
-}
-
-/* RODAPÉ */
-
-footer {
-  padding: 35px 8%;
-  text-align: center;
-  background: #192218;
-  color: white;
-}
-
-footer .logo {
-  justify-content: center;
-}
-
-footer > p {
-  margin: 8px;
-  color: #D3DAC8;
-  font: italic 15px 'Playfair Display';
-}
-
-footer > small {
-  color: #AAB39D;
-  font-size: 10px;
-}
-
-.reset-link {
-  display: block;
-  margin: 15px auto 0;
-  color: #C6CFB1;
-  font-size: 10px;
-}
-
-/* JANELAS */
-
-.dialog {
-  width: min(440px, calc(100% - 30px));
-  margin: auto;
-  padding: 30px;
-  border: 0;
-  background: var(--paper);
-  color: var(--ink);
-  box-shadow: 0 25px 80px #0005;
-}
-
-.dialog::backdrop {
-  background: #11190fcc;
-  backdrop-filter: blur(3px);
-}
-
-.dialog form {
-  position: relative;
-}
-
-.dialog h2 {
-  margin: 9px 0;
-  font: 700 26px 'Playfair Display', Georgia, serif;
-}
-
-.dialog p {
-  color: var(--muted);
-  font-size: 12px;
-  line-height: 1.7;
-}
-
-.dialog label {
-  display: block;
-  margin: 18px 0 6px;
-  font-size: 11px;
-  font-weight: 700;
-}
-
-.dialog input {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #D6D9CA;
-  background: white;
-}
-
-.dialog-x {
-  position: absolute;
-  right: 0;
-  top: -15px;
-}
-
-.dialog-actions {
-  display: flex;
-  justify-content: end;
-  gap: 10px;
-  margin-top: 18px;
-}
-
-/* RESPONSIVIDADE */
-
-@media (max-width: 950px) {
-  .wrap {
-    width: 90%;
+// Informações dos três capítulos
+const chapters = [
+  {
+    title: "Escola limpa, consciência viva",
+    intro: "Neste capítulo, você vai conhecer formas corretas de separar e descartar resíduos. A ideia é observar os espaços do Senac e pensar em atitudes simples para reduzir o lixo.",
+    learning: "Quando os resíduos são descartados de forma incorreta, podem sujar os espaços, atrair animais transmissores de doenças e prejudicar o ambiente. Separar materiais recicláveis facilita o reaproveitamento e diminui a quantidade de lixo enviada aos aterros.",
+    fact: "Na sua sala ou no pátio, quais resíduos aparecem com mais frequência? Como a turma poderia melhorar o descarte?",
+    missions: [
+      ["Observe os resíduos", "Observe, sem mexer em materiais perigosos, quais tipos de lixo aparecem em um espaço da escola."],
+      ["Ação de recolhimento", "Com orientação de um professor, participe de uma ação segura de recolhimento e separação."],
+      ["Compartilhe a ideia", "Crie um aviso ou uma mensagem incentivando o descarte correto."]
+    ]
+  },
+  {
+    title: "Senac mais verde",
+    intro: "As plantas melhoram os espaços, oferecem abrigo para pequenos seres vivos e ajudam a tornar o ambiente mais agradável. Neste capítulo, a turma vai planejar como cuidar das áreas verdes da escola.",
+    learning: "Plantas precisam de cuidados adequados, como água na quantidade certa, luz e solo apropriado. Antes de plantar ou regar, é importante conhecer a espécie e combinar a atividade com a equipe responsável pela escola.",
+    fact: "Que local do Senac poderia receber uma planta? Quem poderia ajudar a cuidar dela depois do plantio?",
+    missions: [
+      ["Conheça as áreas verdes", "Observe as plantas que já existem na escola e identifique quais cuidados elas recebem."],
+      ["Plante com orientação", "Participe do plantio de uma muda adequada ao espaço, com autorização da escola."],
+      ["Monte uma rotina de cuidado", "Ajude a organizar uma escala para verificar a necessidade de rega e acompanhar as plantas."]
+    ]
+  },
+  {
+    title: "Lixo que vira vida",
+    intro: "O terceiro capítulo apresenta o reaproveitamento de resíduos orgânicos por meio da compostagem e de outras escolhas que reduzem o desperdício.",
+    learning: "Cascas de frutas, restos de verduras e folhas secas podem ser transformados em composto orgânico em um sistema adequado. A compostagem reduz o volume de resíduos enviados ao lixo comum e produz material que pode ajudar o solo.",
+    fact: "Quais resíduos orgânicos são produzidos na escola? Seria possível conversar com a equipe sobre uma ação de compostagem?",
+    missions: [
+      ["Descubra o que pode compostar", "Pesquise e identifique exemplos de resíduos orgânicos que podem ir para uma composteira."],
+      ["Planeje uma composteira", "Com seu grupo, desenhe uma proposta simples e converse com um professor antes de qualquer montagem."],
+      ["Divulgue o reaproveitamento", "Crie uma dica ou cartaz explicando como reduzir o desperdício e reaproveitar resíduos orgânicos."]
+    ]
   }
+];
 
-  .stats {
-    grid-template-columns: repeat(2, 1fr);
+// Selecionar elementos da página
+const $ = (selector) => document.querySelector(selector);
+
+// Salvar e recuperar informações
+const storage = {
+  get(key, fallback) {
+    try {
+      const value = localStorage.getItem(key);
+      return value === null ? fallback : JSON.parse(value);
+    } catch {
+      return fallback;
+    }
+  },
+
+  set(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch (error) {
+      console.error("Não foi possível salvar os dados:", error);
+    }
   }
+};
 
-  .chapter-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+// Dados do estudante
+let state = storage.get("ecogeekieState", {
+  name: "",
+  completed: [],
+  quizDone: false,
+  quizPoints: 0
+});
 
-  .hero {
-    padding-inline: 6%;
-  }
+if (!Array.isArray(state.completed)) {
+  state.completed = [];
+}
 
-  .hero-art {
-    transform: scale(0.85);
-  }
+// Salvar o progresso
+function save() {
+  storage.set("ecogeekieState", state);
+}
 
-  .badges {
-    grid-template-columns: 1fr;
+// Atualizar informações na tela
+function render() {
+  const count = state.completed.length;
+  const percent = Math.round(count / 9 * 100);
+
+  $("#points").textContent = count * 50 + state.quizPoints;
+  $("#missions").textContent = count + "/9";
+
+  $("#chapters").textContent =
+    chapters.filter((_, i) =>
+      [0, 1, 2].every(n => state.completed.includes(i * 3 + n))
+    ).length + "/3";
+
+  $("#percent").textContent = percent + "%";
+  $("#progressFill").style.width = percent + "%";
+  $("#progress").setAttribute("aria-valuenow", percent);
+
+  $("#welcomeTitle").textContent = state.name
+    ? `Olá, ${state.name}! Vamos cuidar do nosso espaço?`
+    : "Olá! Vamos cuidar do nosso espaço?";
+
+  $("#headerName").textContent = state.name || "Meu perfil";
+
+  $("#avatar").textContent = state.name
+    ? state.name.trim()[0].toUpperCase()
+    : "A";
+
+  // Atualizar medalhas
+  chapters.forEach((_, i) => {
+    const done = [0, 1, 2].every(n =>
+      state.completed.includes(i * 3 + n)
+    );
+
+    const badge = $("#badge" + i);
+
+    badge.classList.toggle("unlocked", done);
+
+    badge.querySelector("b").textContent = done
+      ? "Conquista desbloqueada!"
+      : "Ainda não conquistada";
+  });
+
+  // Atualizar quiz
+  if (state.quizDone) {
+    $("#quizSubmit").disabled = true;
+    $("#quizSubmit").textContent = "Quiz concluído";
+
+    $("#quizResult").textContent =
+      `Você já concluiu o quiz e ganhou ${state.quizPoints} pontos.`;
+
+    $("#retryQuiz").hidden = false;
+  } else {
+    $("#quizSubmit").disabled = false;
+    $("#quizSubmit").textContent = "Enviar respostas";
   }
 }
 
-@media (max-width: 680px) {
-  .topbar {
-    height: 67px;
-    padding: 0 5%;
-  }
+// Abrir capítulo escolhido
+function openChapter(index) {
+  const chapter = chapters[index];
 
-  .menu-toggle {
-    display: block;
-    border: 0;
-    background: transparent;
-    color: white;
-    font-size: 22px;
-    cursor: pointer;
-  }
+  if (!chapter) return;
 
-  .topbar nav {
-    display: none;
-    position: absolute;
-    top: 67px;
-    left: 0;
-    right: 0;
-    padding: 18px 7%;
-    background: var(--evergreen);
-    flex-direction: column;
-    gap: 14px;
-  }
+  $("#detailEyebrow").textContent = `CAPÍTULO 0${index + 1}`;
+  $("#detailTitle").textContent = chapter.title;
+  $("#detailIntro").textContent = chapter.intro;
+  $("#detailLearning").textContent = chapter.learning;
+  $("#detailFact").textContent = chapter.fact;
 
-  .topbar nav.open {
-    display: flex;
-  }
+  const list = $("#missionList");
+  list.replaceChildren();
 
-  .profile-btn {
-    padding: 5px;
-  }
+  // Mostrar as missões
+  chapter.missions.forEach((mission, j) => {
+    const id = index * 3 + j;
 
-  .profile-btn b {
-    display: none;
-  }
+    const label = document.createElement("label");
 
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 48px 7% 15px;
-  }
+    label.className = "mission" +
+      (state.completed.includes(id) ? " done" : "");
 
-  .hero h1 {
-    font-size: 41px;
-  }
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.checked = state.completed.includes(id);
 
-  .hero-art {
-    min-height: 210px;
-    transform: scale(0.72);
-    margin-top: -5px;
-  }
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked && !state.completed.includes(id)) {
+        state.completed.push(id);
+      }
 
-  .welcome {
-    align-items: start;
-    flex-direction: column;
-    padding-top: 30px;
-  }
+      if (!checkbox.checked) {
+        state.completed = state.completed.filter(
+          item => item !== id
+        );
+      }
 
-  .stats {
-    gap: 8px;
-    padding-bottom: 48px;
-  }
+      label.classList.toggle("done", checkbox.checked);
 
-  .stat {
-    min-height: 95px;
-    padding: 11px;
-    gap: 8px;
-  }
+      save();
+      render();
+    });
 
-  .stat > span {
-    flex-basis: 29px;
-    height: 29px;
-    font-size: 16px;
-  }
+    const text = document.createElement("span");
+    const title = document.createElement("strong");
+    title.textContent = mission[0];
 
-  .stat strong {
-    font-size: 21px;
-  }
+    const desc = document.createElement("small");
+    desc.textContent = mission[1];
 
-  .chapter-grid {
-    grid-template-columns: 1fr;
-  }
+    text.append(title, desc);
+    label.append(checkbox, text);
+    list.append(label);
+  });
 
-  .section-heading {
-    align-items: start;
-  }
+  $("#chapterDetail").hidden = false;
 
-  .chapter-count {
-    display: none;
-  }
-
-  .detail {
-    padding: 20px;
-  }
-
-  .detail-grid,
-  .quiz-layout,
-  .ods-layout {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .quiz-copy {
-    position: static;
-  }
-
-  .quiz-copy h2 {
-    font-size: 32px;
-  }
-
-  .question-mark {
-    display: none;
-  }
-
-  .quiz-box {
-    padding: 20px;
-  }
-
-  .ods h2 {
-    font-size: 27px;
-  }
+  $("#chapterDetail").scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
 }
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
+// Botões dos capítulos
+document.querySelectorAll(".open-chapter").forEach(button => {
+  button.addEventListener("click", () => {
+    openChapter(Number(button.dataset.chapter));
+  });
+});
+
+// Fechar capítulo
+$("#closeDetail").addEventListener("click", () => {
+  $("#chapterDetail").hidden = true;
+});
+
+// Perfil do estudante
+const profileDialog = $("#profileDialog");
+
+function showProfile() {
+  $("#studentName").value = state.name || "";
+  $("#profileMessage").textContent = "";
+  profileDialog.showModal();
+}
+
+$("#openProfile").addEventListener("click", showProfile);
+$("#heroProfile").addEventListener("click", showProfile);
+$("#editProfile").addEventListener("click", showProfile);
+
+// Fechar perfil
+$("#closeProfile").addEventListener("click", () => {
+  profileDialog.close();
+});
+
+// Salvar nome
+$("#profileForm").addEventListener("submit", event => {
+  event.preventDefault();
+
+  const name = $("#studentName").value.trim();
+
+  if (!name) {
+    $("#profileMessage").textContent =
+      "Digite seu nome antes de salvar.";
+
+    $("#studentName").focus();
+    return;
   }
 
-  *,
-  *::before,
-  *::after {
-    transition: none !important;
-    animation: none !important;
-  }
-}
+  state.name = name;
 
+  save();
+  render();
 
-/* ACESSIBILIDADE */
-:root {
-  --page-zoom: 1;
-}
+  profileDialog.close();
+});
 
-.accessibility-area {
-  position: relative;
-  z-index: 150;
-  display: flex;
-  justify-content: flex-end;
-  padding: 10px 7.5%;
-  background: #F3F1E8;
-  border-bottom: 1px solid #D7DACB;
-}
+// Corrigir quiz
+$("#quizForm").addEventListener("submit", event => {
+  event.preventDefault();
 
-.accessibility-toggle,
-.accessibility-buttons button {
-  min-height: 44px;
-  border: 2px solid #3F4C26;
-  border-radius: 6px;
-  padding: 9px 13px;
-  background: #FFFFFF;
-  color: #24301E;
-  font: 700 13px/1.4 Arial, sans-serif;
-  cursor: pointer;
-}
+  const answers = {
+    q1: "b",
+    q2: "c",
+    q3: "a"
+  };
 
-.accessibility-toggle:hover,
-.accessibility-buttons button:hover {
-  background: #E5EAD9;
-}
+  let score = 0;
 
-.accessibility-panel {
-  position: absolute;
-  top: calc(100% + 5px);
-  right: 7.5%;
-  width: min(480px, calc(100vw - 24px));
-  padding: 20px;
-  background: #FFFFFF;
-  color: #202719;
-  border: 2px solid #3F4C26;
-  border-radius: 10px;
-  box-shadow: 0 12px 35px #17201435;
-}
+  for (const [question, correct] of Object.entries(answers)) {
+    const selected = document.querySelector(
+      `input[name="${question}"]:checked`
+    );
 
-.accessibility-panel[hidden] {
-  display: none;
-}
+    if (!selected) {
+      $("#quizResult").textContent =
+        "Responda às três perguntas antes de enviar.";
 
-.accessibility-panel h2 {
-  margin-bottom: 5px;
-  font: 700 21px/1.3 Arial, sans-serif;
-}
+      return;
+    }
 
-.accessibility-panel > p {
-  color: #37412F;
-  font-size: 14px;
-}
-
-.accessibility-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 8px;
-  margin: 15px 0;
-}
-
-.accessibility-buttons button {
-  width: 100%;
-  font-size: 12px;
-}
-
-.accessibility-buttons button:disabled {
-  opacity: 0.55;
-  cursor: not-allowed;
-}
-
-.accessibility-help {
-  padding-top: 10px;
-  border-top: 1px solid #D8DDCF;
-  line-height: 1.6;
-}
-
-.accessibility-status {
-  min-height: 1.5em;
-  margin-top: 8px;
-  color: #24301E !important;
-  font-weight: 700;
-}
-
-body.high-contrast {
-  background: #000000 !important;
-  color: #FFFFFF !important;
-}
-
-body.high-contrast header,
-body.high-contrast footer,
-body.high-contrast .quiz-section,
-body.high-contrast .hero {
-  background: #000000 !important;
-  color: #FFFFFF !important;
-}
-
-body.high-contrast main section,
-body.high-contrast article,
-body.high-contrast .stat,
-body.high-contrast .learning,
-body.high-contrast .quiz-box,
-body.high-contrast .detail,
-body.high-contrast .mission,
-body.high-contrast .ods,
-body.high-contrast .ods-list article,
-body.high-contrast .chapter-card,
-body.high-contrast .accessibility-panel {
-  background: #000000 !important;
-  color: #FFFFFF !important;
-  border: 1px solid #FFFFFF !important;
-}
-
-body.high-contrast p,
-body.high-contrast small,
-body.high-contrast label,
-body.high-contrast legend,
-body.high-contrast h1,
-body.high-contrast h2,
-body.high-contrast h3,
-body.high-contrast b,
-body.high-contrast strong,
-body.high-contrast a,
-body.high-contrast .eyebrow,
-body.high-contrast .stat p,
-body.high-contrast .ods-list small {
-  color: #FFFFFF !important;
-}
-
-body.high-contrast button {
-  background: #000000 !important;
-  color: #FFFF00 !important;
-  border: 2px solid #FFFF00 !important;
-}
-
-body.high-contrast a {
-  text-decoration: underline !important;
-}
-
-body.high-contrast input {
-  background: #000000 !important;
-  color: #FFFFFF !important;
-  border: 2px solid #FFFF00 !important;
-}
-
-body.extra-spacing,
-body.extra-spacing * {
-  line-height: 1.9 !important;
-  letter-spacing: 0.04em !important;
-  word-spacing: 0.12em !important;
-}
-
-body.underlined-links a {
-  text-decoration: underline !important;
-  text-decoration-thickness: 2px !important;
-  text-underline-offset: 3px !important;
-}
-
-button:focus-visible,
-a:focus-visible,
-input:focus-visible,
-.accessibility-toggle:focus-visible,
-.accessibility-buttons button:focus-visible {
-  outline: 4px solid #B18D43 !important;
-  outline-offset: 4px !important;
-}
-
-[aria-live] {
-  overflow-wrap: anywhere;
-}
-
-@media (max-width: 680px) {
-  .accessibility-area {
-    padding: 8px 5%;
+    if (selected.value === correct) {
+      score++;
+    }
   }
 
-  .accessibility-panel {
-    right: 5%;
-  }
+  state.quizDone = true;
+  state.quizPoints = score * 10;
 
-  .accessibility-buttons {
-    grid-template-columns: 1fr;
-  }
+  save();
+  render();
 
-  .accessibility-toggle {
-    width: 100%;
+  $("#quizResult").textContent =
+    `Você acertou ${score} de 3 perguntas e ganhou ${state.quizPoints} pontos!`;
+
+  $("#retryQuiz").hidden = false;
+});
+
+// Refazer quiz
+$("#retryQuiz").addEventListener("click", () => {
+  state.quizDone = false;
+  state.quizPoints = 0;
+
+  save();
+
+  $("#quizForm").reset();
+  $("#quizResult").textContent = "";
+
+  render();
+});
+
+// Reiniciar progresso
+const resetDialog = $("#resetDialog");
+
+$("#resetProgress").addEventListener("click", () => {
+  resetDialog.showModal();
+});
+
+$("#confirmReset").addEventListener("click", event => {
+  event.preventDefault();
+
+  state = {
+    name: state.name,
+    completed: [],
+    quizDone: false,
+    quizPoints: 0
+  };
+
+  save();
+  render();
+
+  $("#quizForm").reset();
+  $("#quizResult").textContent = "";
+
+  resetDialog.close();
+  $("#chapterDetail").hidden = true;
+});
+
+// Menu para celular
+$("#menuToggle").addEventListener("click", () => {
+  const nav = $("#nav");
+  const open = nav.classList.toggle("open");
+
+  $("#menuToggle").setAttribute(
+    "aria-expanded",
+    String(open)
+  );
+});
+
+// Fechar menu ao clicar em um link
+$("#nav").querySelectorAll("a").forEach(link => {
+  link.addEventListener("click", () => {
+    $("#nav").classList.remove("open");
+
+    $("#menuToggle").setAttribute(
+      "aria-expanded",
+      "false"
+    );
+  });
+});
+
+// Carregar informações ao abrir o site
+render();
+
+
+// FERRAMENTAS DE ACESSIBILIDADE
+
+const accessibilityToggle = $("#accessibilityToggle");
+const accessibilityPanel = $("#accessibilityPanel");
+const accessibilityStatus = $("#accessibilityStatus");
+
+// Abrir e fechar painel
+accessibilityToggle.addEventListener("click", () => {
+  const isOpen =
+    accessibilityToggle.getAttribute("aria-expanded") === "true";
+
+  accessibilityToggle.setAttribute(
+    "aria-expanded",
+    String(!isOpen)
+  );
+
+  accessibilityPanel.hidden = isOpen;
+
+  if (!isOpen) {
+    $("#increaseText").focus();
   }
+});
+
+// Aumentar e diminuir tamanho da página
+let pageZoom = 1;
+
+function updatePageZoom() {
+  document.documentElement.style.zoom = pageZoom;
+
+  accessibilityStatus.textContent =
+    `Tamanho da página: ${Math.round(pageZoom * 100)} por cento.`;
 }
 
-@media (forced-colors: active) {
-  button,
-  a,
-  input,
-  .accessibility-panel {
-    forced-color-adjust: auto;
-  }
+$("#increaseText").addEventListener("click", () => {
+  pageZoom = Math.min(
+    1.4,
+    Number((pageZoom + 0.1).toFixed(1))
+  );
+
+  updatePageZoom();
+});
+
+$("#decreaseText").addEventListener("click", () => {
+  pageZoom = Math.max(
+    0.8,
+    Number((pageZoom - 0.1).toFixed(1))
+  );
+
+  updatePageZoom();
+});
+
+$("#resetText").addEventListener("click", () => {
+  pageZoom = 1;
+  updatePageZoom();
+});
+
+// Alto contraste
+$("#contrastToggle").addEventListener("click", event => {
+  const enabled = document.body.classList.toggle("high-contrast");
+
+  event.currentTarget.setAttribute(
+    "aria-pressed",
+    String(enabled)
+  );
+
+  accessibilityStatus.textContent = enabled
+    ? "Alto contraste ativado."
+    : "Alto contraste desativado.";
+});
+
+// Espaçamento do texto
+$("#spacingToggle").addEventListener("click", event => {
+  const enabled = document.body.classList.toggle("extra-spacing");
+
+  event.currentTarget.setAttribute(
+    "aria-pressed",
+    String(enabled)
+  );
+
+  accessibilityStatus.textContent = enabled
+    ? "Espaçamento ampliado ativado."
+    : "Espaçamento normal restaurado.";
+});
+
+// Sublinhado dos links
+$("#underlineToggle").addEventListener("click", event => {
+  const enabled = document.body.classList.toggle("underlined-links");
+
+  event.currentTarget.setAttribute(
+    "aria-pressed",
+    String(enabled)
+  );
+
+  accessibilityStatus.textContent = enabled
+    ? "Links destacados com sublinhado."
+    : "Destaque extra dos links desativado.";
+});
+
+
+// LEITURA EM VOZ ALTA
+
+const readButton = $("#readPage");
+const pauseButton = $("#pauseReading");
+const stopButton = $("#stopReading");
+
+function setReadingButtons(isReading) {
+  pauseButton.disabled = !isReading;
+  stopButton.disabled = !isReading;
 }
+
+// Iniciar leitura
+readButton.addEventListener("click", () => {
+  if (!("speechSynthesis" in window)) {
+    accessibilityStatus.textContent =
+      "A leitura em voz alta não está disponível neste navegador. Você pode usar o leitor de tela do dispositivo.";
+
+    return;
+  }
+
+  window.speechSynthesis.cancel();
+
+  const mainContent = $("#conteudo").innerText;
+  const cleanText = mainContent.replace(/\s+/g, " ").trim();
+
+  if (!cleanText) {
+    accessibilityStatus.textContent =
+      "Não há conteúdo disponível para leitura.";
+
+    return;
+  }
+
+  const speech = new SpeechSynthesisUtterance(cleanText);
+
+  speech.lang = "pt-BR";
+  speech.rate = 0.95;
+
+  speech.onstart = () => {
+    accessibilityStatus.textContent =
+      "Leitura em voz alta iniciada.";
+
+    setReadingButtons(true);
+  };
+
+  speech.onend = () => {
+    accessibilityStatus.textContent =
+      "Leitura finalizada.";
+
+    setReadingButtons(false);
+  };
+
+  speech.onerror = () => {
+    accessibilityStatus.textContent =
+      "Não foi possível realizar a leitura neste momento.";
+
+    setReadingButtons(false);
+  };
+
+  window.speechSynthesis.speak(speech);
+});
+
+// Pausar ou continuar leitura
+pauseButton.addEventListener("click", () => {
+  if (!("speechSynthesis" in window)) return;
+
+  if (window.speechSynthesis.paused) {
+    window.speechSynthesis.resume();
+
+    pauseButton.textContent = "Pausar leitura";
+
+    accessibilityStatus.textContent =
+      "Leitura retomada.";
+  } else {
+    window.speechSynthesis.pause();
+
+    pauseButton.textContent = "Continuar leitura";
+
+    accessibilityStatus.textContent =
+      "Leitura pausada.";
+  }
+});
+
+// Parar leitura
+stopButton.addEventListener("click", () => {
+  if ("speechSynthesis" in window) {
+    window.speechSynthesis.cancel();
+  }
+
+  pauseButton.textContent = "Pausar leitura";
+
+  setReadingButtons(false);
+
+  accessibilityStatus.textContent =
+    "Leitura interrompida.";
+});
+
+// Fechar painel com a tecla Escape
+document.addEventListener("keydown", event => {
+  if (
+    event.key === "Escape" &&
+    accessibilityToggle.getAttribute("aria-expanded") === "true"
+  ) {
+    accessibilityToggle.setAttribute("aria-expanded", "false");
+
+    accessibilityPanel.hidden = true;
+
+    accessibilityToggle.focus();
+  }
+});
