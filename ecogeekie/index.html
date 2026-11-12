@@ -13,17 +13,53 @@
 
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
 
+  <section class="accessibility-area" aria-label="Ferramentas de acessibilidade">
+    <button
+      class="accessibility-toggle"
+      id="accessibilityToggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="accessibilityPanel"
+    >
+      <span aria-hidden="true">◉</span>
+      Acessibilidade
+    </button>
+
+    <div class="accessibility-panel" id="accessibilityPanel" hidden>
+      <h2>Opções de acessibilidade</h2>
+      <p>Escolha os recursos que facilitam sua navegação.</p>
+
+      <div class="accessibility-buttons">
+        <button type="button" id="increaseText" aria-label="Aumentar o tamanho da página">A+ Aumentar</button>
+        <button type="button" id="decreaseText" aria-label="Diminuir o tamanho da página">A− Diminuir</button>
+        <button type="button" id="resetText">Tamanho normal</button>
+        <button type="button" id="contrastToggle" aria-pressed="false">Alto contraste</button>
+        <button type="button" id="spacingToggle" aria-pressed="false">Espaçamento do texto</button>
+        <button type="button" id="underlineToggle" aria-pressed="false">Destacar links</button>
+        <button type="button" id="readPage">Ler conteúdo em voz alta</button>
+        <button type="button" id="pauseReading" disabled>Pausar leitura</button>
+        <button type="button" id="stopReading" disabled>Parar leitura</button>
+      </div>
+
+      <p class="accessibility-help">
+        Você também pode navegar usando a tecla Tab e ativar os botões com Enter ou Espaço.
+        O leitor de tela do seu dispositivo continua sendo compatível com a página.
+      </p>
+      <p id="accessibilityStatus" class="accessibility-status" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
   <header class="topbar">
     <a class="logo" href="#inicio">
   <img
     class="logo-img"
     src="img/ChatGPT Image 11 de nov. de 2026, 17_43_55.png"
-    alt="Logo EcoGeekie"
+    alt=""
   >
   Eco<span>Geekie</span>
 </a>
 
-    <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="nav">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menu de navegação" aria-expanded="false" aria-controls="nav">
       ☰ <span class="sr-only">Abrir menu</span>
     </button>
 
@@ -34,7 +70,7 @@
       <a href="#conquistas">Conquistas</a>
     </nav>
 
-    <button class="profile-btn" id="openProfile" type="button">
+    <button class="profile-btn" id="openProfile" type="button" aria-label="Abrir meu perfil">
       <span id="avatar">A</span>
       <b id="headerName">Meu perfil</b>
     </button>
@@ -220,7 +256,7 @@
           <h2 id="detailTitle"></h2>
         </div>
 
-        <button class="close" id="closeDetail" aria-label="Fechar capítulo">×</button>
+        <button class="close" id="closeDetail" type="button" aria-label="Fechar capítulo">×</button>
       </div>
 
       <p id="detailIntro" class="detail-intro"></p>
@@ -441,7 +477,7 @@
   <img
     class="logo-img"
     src="img/ChatGPT Image 11 de nov. de 2026, 17_43_55.png"
-    alt="Logo EcoGeekie"
+    alt=""
   >
   Eco<span>Geekie</span>
 </a>
@@ -449,7 +485,7 @@
     <p>Aprender. Cuidar. Transformar.</p>
     <small>Projeto educativo de sustentabilidade • Senac</small>
 
-    <button class="link-btn reset-link" id="resetProgress">
+    <button class="link-btn reset-link" id="resetProgress" type="button">
       Reiniciar meu progresso
     </button>
   </footer>
@@ -494,6 +530,19 @@
       </div>
     </form>
   </dialog>
+
+
+  <!-- VLibras: ferramenta oficial de tradução automática para Libras -->
+  <div vw class="enabled">
+    <div vw-access-button class="active" aria-label="Abrir tradução em Libras"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget("https://vlibras.gov.br/app");
+  </script>
 
 </body>
 </html>
